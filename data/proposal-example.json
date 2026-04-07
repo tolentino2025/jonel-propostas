@@ -1,0 +1,511 @@
+{
+  "brand": {
+    "companyName": "Jonel Engenharia de Instalacoes",
+    "companyLegalName": "Jonel Equipamentos Contra Incendios Ltda",
+    "tagline": "Engenharia com foco em seguranca, conformidade e performance",
+    "logoSvgInline": "<svg xmlns='http://www.w3.org/2000/svg' width='220' height='65' viewBox='0 0 220 65'><rect width='220' height='65' rx='10' fill='rgba(255,255,255,0.08)' stroke='rgba(255,255,255,0.15)'/><text x='110' y='38' text-anchor='middle' font-family='Inter,system-ui,sans-serif' font-size='22' font-weight='800' fill='#FFF' letter-spacing='0.05em'>JONEL</text><text x='110' y='55' text-anchor='middle' font-family='Inter,system-ui,sans-serif' font-size='7.5' font-weight='400' fill='rgba(214,166,69,0.7)' letter-spacing='0.15em'>ENGENHARIA DE INSTALACOES</text></svg>",
+    "engineer": {
+      "name": "Cleiton Tolentino de Almeida",
+      "crea": "506.229.294-8/D",
+      "rg": "28.229.324-3",
+      "cpf": "270.382.328-27"
+    }
+  },
+
+  "proposalMeta": {
+    "proposalTitle": "Proposta Tecnica e Comercial",
+    "proposalSubtitle": "Sistema de Prevencao e Combate a Incendio",
+    "proposalCode": "PROP-2026-001",
+    "date": "07 de Abril de 2026",
+    "validityDays": 15,
+    "version": "R00"
+  },
+
+  "client": {
+    "clientName": "Magnum Industrial Ltda.",
+    "contactName": "Eng. Carlos Eduardo Mendes",
+    "contactDept": "Depto de Engenharia",
+    "address": "Rod. Santos Dumont, km 72",
+    "cityState": "Valinhos/SP",
+    "projectName": "Adequacao do Sistema de Incendio — Planta Valinhos",
+    "projectRef": "Fornecimento do sistema completo de protecao contra incendios"
+  },
+
+  "introLetter": {
+    "greeting": "Prezados Senhores:",
+    "body": "A Jonel acredita que uma parceria e essencial para o sucesso de qualquer projeto. Por isso, somos orgulhosos de nos dedicarmos a desenvolver solucoes eficazes e produtivas em sistemas de prevencao e combate a incendios, instalacoes eletricas e hidrossanitarias para nossos clientes.\n\nAssim apresentamos nossa proposta tecnica e comercial para o fornecimento de projetos, materiais e mao-de-obra para a instalacao e testes de sistemas de prevencao e combate a incendios, instalacoes eletricas e hidrossanitarias, trabalhando em regime de empreitada global. Estamos comprometidos em oferecer solucoes eficazes, que atendam as suas expectativas.",
+    "closing": "Atenciosamente"
+  },
+
+  "objective": {
+    "items": [
+      "O objeto desta proposta e o fornecimento de material e mao de obra para instalacao e testes de sistemas de prevencao e combate a incendios, instalacoes eletricas e hidrossanitarias, incluindo equipamentos para montagens e ferramentas que forem necessarios, conforme especificacoes em projetos.",
+      "Todos os materiais necessarios para a execucao dos sistemas serao fornecidos atraves do faturamento direto dos fornecedores da JONEL a empresa Contratante.",
+      "Todos os servicos serao executados seguindo rigorosamente os projetos, especificacoes, memoriais e desenhos, com o uso da melhor tecnica e qualidade e seguranca disponivel, segundo recomendacoes da ABNT."
+    ]
+  },
+
+  "normsAndStandards": ["ABNT", "NFPA", "FM Global", "UL"],
+
+  "scopeOfSupply": {
+    "description": "Fornecimento de materiais e mao de obra para os sistemas de prevencao e combate a incendios, instalacoes eletricas e hidrossanitarias, bem como todos acessorios necessarios a sua operacao.",
+    "includes": [
+      "Montagem dos sistemas incluindo o transporte, equipamentos, acessorios e toda mao de obra necessaria",
+      "Testes e start-up",
+      "Interacao com a Construtora Civil",
+      "ART do fornecimento (instalacao)",
+      "Transporte e Seguro",
+      "Servicos de instalacao e testes",
+      "Treinamentos",
+      "Comissionamento e testes de aceitacao",
+      "Embalagem, transporte, seguro, armazenagem no local da obra e movimentacao de todos os materiais e equipamentos",
+      "Montagem de equipamentos e materiais",
+      "Equipamentos e ferramentas para montagem (andaimes, plataforma elevatoria, etc.)"
+    ]
+  },
+
+  "systems": [
+    {
+      "id": "pump-house",
+      "title": "Casa de Bombas do Sistema de Hidrantes e Chuveiros Automaticos",
+      "enabled": true,
+      "category": "Infraestrutura",
+      "shortTitle": "Casa de Bombas",
+      "equipmentTable": [
+        {"item": "Bombas de incendio principal e auxiliar UL/FM", "qty": "01 conjunto"},
+        {"item": "Valvula de alivio angular UL/FM", "qty": "01 conjunto"},
+        {"item": "Medidor de vazao UL/FM", "qty": "01 conjunto"},
+        {"item": "Waste cone com visor de fluxo UL/FM", "qty": "01 conjunto"},
+        {"item": "Barrilete de medicao UL/FM", "qty": "01 conjunto"},
+        {"item": "Tubulacao de retorno reservatorio — valvula de alivio", "qty": "01 conjunto"},
+        {"item": "Tubulacao de retorno reservatorio — medidor de vazao", "qty": "01 conjunto"},
+        {"item": "Paineis de comando da bomba principal e auxiliar UL/FM", "qty": "01 conjunto"}
+      ],
+      "technicalDescription": "A nova casa de bombas do sistema de chuveiros automaticos e hidrantes a ser instalada atende toda a demanda do site existente e futura. Os sistemas de chuveiros automaticos serao pressurizados atraves de um conjunto de moto bomba interligada a um painel eletrico do tipo estrela triangulo para comando do sistema.",
+      "subItems": [
+        {
+          "title": "Conjunto Moto-Bomba Diesel",
+          "qty": "01",
+          "specs": [
+            "Bomba centrifuga horizontal bipartida axialmente",
+            "Ponto de Operacao: Q = 564 m3/h e H = 13.5 kgf/cm2",
+            "Motor diesel estacionario CUMMINS ou similar 500 hp @ 1800 rpm",
+            "Painel de comando Cutler Hammer modelo FD120 L6",
+            "Tanque de Combustivel de 1500 litros conforme NFPA-20",
+            "Valvula de Alivio Cla-Val de 6\" 150#",
+            "Flowmeter Global Vision 10\"-2500-F",
+            "Aprovacao UL/FM"
+          ]
+        },
+        {
+          "title": "Conjunto Moto-Bomba Eletrico",
+          "qty": "01",
+          "specs": [
+            "Bomba centrifuga succao frontal",
+            "Ponto de Operacao: Q = 564 m3/h e H = 13.5 kgf/cm2",
+            "Motor eletrico de 500 hp, 3500 rpm, IP21",
+            "Painel eletrico partida soft-start 380v conforme NFPA 20",
+            "Aprovacao UL/FM"
+          ]
+        },
+        {
+          "title": "Conjunto Jockey",
+          "qty": "01",
+          "specs": [
+            "Bomba centrifuga horizontal multiestagio",
+            "Ponto de Operacao: Q = 1,2 m3/h e H = 14.5 kgf/cm2",
+            "Motor Eletrico 3,4cv, 3500 rpm",
+            "Painel de comando Cutler Hammer XTJP4H partida direta"
+          ]
+        }
+      ],
+      "testDescription": "Apos a instalacao e antes da conexao com os sistemas de abastecimento, toda tubulacao devera ser lavada internamente (flushing), e testada hidrostaticamente com pressao minima de 15,8 kgf/cm2, pelo periodo minimo de duas horas. Ao termino, sera entregue projeto As Built e ART.",
+      "value": 0
+    },
+    {
+      "id": "sprinklers",
+      "title": "Sistema de Chuveiros Automaticos — Sprinklers",
+      "enabled": true,
+      "category": "Supressao Automatica",
+      "shortTitle": "Sprinklers",
+      "equipmentTable": [
+        {"item": "Chuveiros Automaticos ESFR K360 1\" 74C UL/FM", "qty": "850 pontos"},
+        {"item": "Chuveiros Automaticos K160 3/4\" 79C UL/FM", "qty": "68 pontos"},
+        {"item": "Chuveiros Automaticos K115 3/4\" 79C UL/FM", "qty": "12 pontos"},
+        {"item": "Valvula de Governo e Alarme completa UL/FM", "qty": "02 conjuntos"}
+      ],
+      "technicalDescription": "O sprinkler automatico e um equipamento capaz de controlar ou suprimir um incendio antes que ele se espalhe, por meio da distribuicao de um jato de agua que atua sobre o foco inicial do fogo. E ativado por meio de um elemento termo sensivel que, quando atinge a temperatura de operacao, rompe-se, permitindo que o sprinkler se abra.",
+      "subItems": [
+        {
+          "title": "Tubulacao e Conexoes",
+          "specs": ["Tubos de aco carbono preto ASTM A106 Gr B, SCH 10", "Conexoes roll grooved em ferro fundido nodular ASTM A 536 UL/FM"]
+        },
+        {
+          "title": "Chave de Fluxo VSR-F",
+          "specs": ["Vazao min. para atuacao: 10 gpm/min", "Pressao maxima de trabalho: 450 psi", "Aprovacao UL/FM"]
+        },
+        {
+          "title": "Valvula de Governo e Alarme",
+          "specs": ["Montagem vertical, flange ANSI B.16.1", "Faixa de trabalho de 2 a 12 bar", "Ferro fundido, listada UL e aprovada FM"]
+        }
+      ],
+      "testDescription": "Teste hidrostatico com pressao minima de 15,8 kgf/cm2, periodo minimo de 2 horas, conforme ABNT/NBR 10897, NFPA 13 e DS 2-0. Entrega de formularios FM Global, projeto As Built e ART.",
+      "value": 0
+    },
+    {
+      "id": "hydrants",
+      "title": "Sistema de Hidrantes",
+      "enabled": true,
+      "category": "Combate Manual",
+      "shortTitle": "Hidrantes",
+      "equipmentTable": [
+        {"item": "Hidrantes duplos completos", "qty": "125 conjuntos"}
+      ],
+      "technicalDescription": "O sistema de hidrantes tem como objetivo principal o combate manual atraves de pessoas devidamente treinadas. Cada hidrante contera um abrigo metalico, registro tipo globo angular de 2 1/2\", adaptador tipo engate rapido, mangueiras tipo II com comprimento de 30m e esguicho tipo jato regulavel.",
+      "subItems": [
+        {
+          "title": "Composicao de cada Hidrante Duplo",
+          "specs": [
+            "02 Valvulas angular 45 para hidrantes, bronze ASTM B-62",
+            "02 Adaptadores de engate rapido tipo Storz em latao",
+            "02 Tampoes de engate rapido tipo Storz com corrente",
+            "01 Armario metalico de sobrepor (900x1200x300mm)",
+            "04 Mangueiras para incendio tipo II, 15m, Storz",
+            "02 Esguichos regulaveis jato solido e neblina",
+            "04 Chaves para conexao Storz em latao"
+          ]
+        },
+        {
+          "title": "Tubulacao",
+          "specs": ["Aco carbono preto ASTM A106 Gr B, SCH 10", "Conexoes roll grooved UL/FM"]
+        }
+      ],
+      "testDescription": "Teste hidrostatico com pressao minima de 13,8 kgf/cm2 (200 psi), periodo minimo de 2 horas, conforme NFPA 13 e DS 2-0. Entrega de projeto As Built e ART.",
+      "value": 0
+    },
+    {
+      "id": "detection",
+      "title": "Sistema de Deteccao de Fumaca e Alarme de Incendio",
+      "enabled": true,
+      "category": "Deteccao e Alarme",
+      "shortTitle": "Deteccao e Alarme",
+      "equipmentTable": [
+        {"item": "Central de deteccao enderecavel ate 10 circuitos UL/FM", "qty": "01 conjunto"},
+        {"item": "Acionador manual enderecavel com base UL/FM", "qty": "104 pontos"},
+        {"item": "Sirene audiovisual UL/FM", "qty": "104 pontos"},
+        {"item": "Detector de fumaca enderecavel UL/FM", "qty": "116 pontos"},
+        {"item": "Detector de calor enderecavel UL/FM", "qty": "18 pontos"},
+        {"item": "Anunciador remoto LED (painel repetidor) UL/FM", "qty": "05 pontos"},
+        {"item": "Detector de GLP na caldeira UL/FM", "qty": "02 pontos"}
+      ],
+      "technicalDescription": "O sistema e constituido de uma serie de acionadores manuais endereçados, detectores de fumaca, modulos de controle e endereçamento e sirenes, distribuidos pelos predios, interligados a um painel central. Todos os pontos interligados atraves de laco de comunicacao digital (SLC).",
+      "subItems": [
+        {
+          "title": "Central de Alarme Inteligente",
+          "specs": ["Configuracao modular autonoma ou em rede", "Voz multi-canais, telefone de bombeiros", "Anunciadores graficos LED/LCD", "Aprovacao UL/FM"]
+        },
+        {
+          "title": "Detectores de Fumaca Endereçaveis",
+          "specs": ["Camara de sensor otico fotoeletrico", "Sensor termico de temperatura fixa 135F (57C)", "Sensibilidade programavel via painel", "Aprovacao UL/FM"]
+        },
+        {
+          "title": "Sirene Audiovisual",
+          "specs": ["Potencia sonora: 101 dB a 3m", "Flash: 1 pulso por segundo, lampada de xenonio", "Alimentacao: 24 Vcc, 110 candela", "Aprovacao UL/FM"]
+        },
+        {
+          "title": "Acionador Manual Endereçavel",
+          "specs": ["Dupla acao com interface endereçavel", "Inscricoes em letras brancas e texto em Braille", "Policarbonato vermelho", "Aprovacao UL/FM"]
+        }
+      ],
+      "testDescription": "Ao termino sera entregue projeto As Built em DWG, ART e Laudo de Teste do Sistema.",
+      "value": 0
+    },
+    {
+      "id": "gas-suppression",
+      "title": "Sistema Fixo de Extincao por Gas Novec 1230",
+      "enabled": true,
+      "category": "Supressao por Gas",
+      "shortTitle": "Supressao por Gas",
+      "equipmentTable": [
+        {"item": "Sala de Paineis — Predio de Producao Terreo/Area 5000", "qty": "01 conjunto"}
+      ],
+      "technicalDescription": "O agente extintor NOVEC 1230, utilizado no sistema SAPPHIRE, possui ODP igual a zero e tempo de vida na atmosfera de apenas 5 dias. Apresentado na forma de sistema fixo convencional ou modular para combate a incendios das classes A, B e C, por meio de inundacao total. Projetado conforme NFPA-2001, listado UL/ULC e aprovado FM.",
+      "subItems": [
+        {
+          "title": "Filosofia de Acionamento",
+          "specs": [
+            "AUTOMATICA: cruzamento de laco (dois ou mais detectores) inicia contagem para evacuacao e disparo",
+            "SEMIAUTOMATICA: botoeira de acionamento inicia o processo via central eletronica",
+            "MANUAL: alavanca na valvula de disparo dos cilindros, sem auxilio eletronico"
+          ]
+        },
+        {
+          "title": "Aplicacoes Tipicas",
+          "specs": ["Salas de computacao e Data Centers", "Telecomunicacoes e ERBs", "Salas de controle", "Salas cofres e fitotecas"]
+        }
+      ],
+      "testDescription": "Testes conforme NFPA-2001 com entrega de ART e documentacao tecnica.",
+      "value": 0
+    },
+    {
+      "id": "emergency-lighting",
+      "title": "Sistema de Iluminacao de Emergencia",
+      "enabled": true,
+      "category": "Iluminacao",
+      "shortTitle": "Iluminacao de Emergencia",
+      "equipmentTable": [
+        {"item": "Luminarias de emergencia autonomas de balizamento e saida", "qty": "conforme projeto"}
+      ],
+      "technicalDescription": "O sistema tera autonomia plena de no minimo 02 horas de duracao e sua comutacao ocorrera automaticamente quando da falta de energia ou desativacao da chave geral por motivo de emergencia. Serao instaladas luminarias do tipo autonomas de Balizamento e Saida.",
+      "subItems": [
+        {
+          "title": "Luminaria de Emergencia 2x8W LED",
+          "specs": ["Bateria VRLA isenta de manutencao", "LEDs SMD de alta intensidade", "Bivolt automatico 127/220V", "Instalacao em parede, teto ou embutida"]
+        },
+        {
+          "title": "Luminaria de Emergencia 110W Projetores",
+          "specs": ["Sistema totalmente automatico", "Bateria 12V/40Ah selada", "Autonomia proxima a 4 horas", "Protecao contra descarga excessiva"]
+        }
+      ],
+      "testDescription": "ART no inicio e Laudo de Teste ao termino com projeto As Built.",
+      "value": 0
+    },
+    {
+      "id": "signage-extinguishers",
+      "title": "Sinalizacao de Rota de Fuga, Equipamentos e Extintores",
+      "enabled": true,
+      "category": "Sinalizacao",
+      "shortTitle": "Sinalizacao e Extintores",
+      "equipmentTable": [
+        {"item": "Sinalizacao de rota de fuga e equipamentos", "qty": "01 conjunto"},
+        {"item": "Extintor portatil Po ABC 4-A:40-B:C 6kg", "qty": "221 pontos"},
+        {"item": "Extintor portatil PQS BC 20-B:C 6kg", "qty": "20 pontos"},
+        {"item": "Extintor portatil PQS BC 40-B:C 8kg", "qty": "02 pontos"},
+        {"item": "Extintor portatil CO2 5-B:C 6kg", "qty": "27 pontos"},
+        {"item": "Extintor portatil Espuma Mecanica 2-A:10-B 10L", "qty": "02 pontos"},
+        {"item": "Extintor sobre rodas PQS BC 80-B:C 50kg", "qty": "06 pontos"}
+      ],
+      "technicalDescription": "A sinalizacao de emergencia tem como finalidade reduzir o risco de ocorrencia de incendio, alertando os riscos existentes e garantir que sejam adotadas acoes adequadas a situacao de risco. Os extintores devem ser adequados a classe de incendio predominante dentro da area de risco.",
+      "subItems": [
+        {
+          "title": "Sinalizacao de Proibicao e Alerta",
+          "specs": ["Placas P1, P2 (353mm)", "Placas A1, A2, A5 (476mm)"]
+        },
+        {
+          "title": "Sinalizacao de Orientacao e Salvamento",
+          "specs": ["Placas S2, S3, S8, S9, S12, S17, S18 (442x221mm)"]
+        },
+        {
+          "title": "Sinalizacao de Equipamentos",
+          "specs": ["Placas E1, E2, E5, E7, E8, E10, E11 (313mm)", "Placa E17 (1,0x1,0m)", "Placa M1 (indicacao dos sistemas)"]
+        }
+      ],
+      "testDescription": "Instalacao conforme NBR 13434 e IT 20 do CBPMESP.",
+      "value": 0
+    },
+    {
+      "id": "electrical",
+      "title": "Instalacoes Eletricas",
+      "enabled": true,
+      "category": "Instalacoes Eletricas",
+      "shortTitle": "Inst. Eletricas",
+      "equipmentTable": [
+        {"item": "Subestacao 4MVA", "qty": "01 conjunto"},
+        {"item": "Distribuicao de circuito de media tensao", "qty": "01 conjunto"},
+        {"item": "Quadros de incendio ligados ao gerador", "qty": "01 conjunto"},
+        {"item": "Gerador carenado com QTA", "qty": "01 conjunto"},
+        {"item": "Quadros QDG e QGBT", "qty": "01 conjunto"},
+        {"item": "Quadros de distribuicao", "qty": "01 conjunto"},
+        {"item": "Infraestrutura para distribuicao eletrica", "qty": "01 conjunto"},
+        {"item": "Cabeamento eletrico", "qty": "01 conjunto"},
+        {"item": "Tomadas e interruptores", "qty": "01 conjunto"},
+        {"item": "Luminarias", "qty": "01 conjunto"},
+        {"item": "Infraestrutura seca de dados e CFTV", "qty": "01 conjunto"},
+        {"item": "Testes finais e start-up", "qty": "01 conjunto"}
+      ],
+      "technicalDescription": "Projeto completo de instalacoes eletricas incluindo subestacao, quadros de distribuicao, cabeamento, iluminacao, tomadas, infraestrutura de dados e testes finais. Todos os quadros supervisionados pelo sistema de automacao predial.",
+      "subItems": [],
+      "testDescription": "Testes de comissionamento e start-up completos.",
+      "value": 0
+    },
+    {
+      "id": "hydrosanitary",
+      "title": "Instalacoes Hidrossanitarias",
+      "enabled": true,
+      "category": "Instalacoes Hidrossanitarias",
+      "shortTitle": "Inst. Hidrossanitarias",
+      "equipmentTable": [
+        {"item": "Aguas pluviais", "qty": "01 conjunto"},
+        {"item": "Agua fria", "qty": "01 conjunto"},
+        {"item": "Dreno", "qty": "01 conjunto"},
+        {"item": "Esgoto", "qty": "01 conjunto"},
+        {"item": "Ventilacao", "qty": "01 conjunto"},
+        {"item": "Loucas e metais", "qty": "01 conjunto"}
+      ],
+      "technicalDescription": "Sistemas prediais hidraulicos executados de acordo com normas tecnicas brasileiras vigentes, em harmonia com demais projetos. Inclui agua fria, esgoto sanitario, ventilacao e aguas pluviais.",
+      "subItems": [],
+      "testDescription": "Ensaio com agua conforme NBR, pressao minima 100 kPa, periodo minimo 1 hora.",
+      "value": 0
+    },
+    {
+      "id": "supports",
+      "title": "Dormentes e Suportes",
+      "enabled": true,
+      "category": "Suportacao",
+      "shortTitle": "Suportes",
+      "equipmentTable": [
+        {"item": "Dormente 60x20", "qty": "492 conjuntos"},
+        {"item": "Dormente 90x20", "qty": "107 conjuntos"},
+        {"item": "Dormente 110x20", "qty": "44 conjuntos"},
+        {"item": "Suporte S1", "qty": "758 conjuntos"},
+        {"item": "Suporte S5", "qty": "1272 conjuntos"}
+      ],
+      "technicalDescription": "Suportes em aco galvanizado compostos por abraçadeiras, vergalhoes e perfilados. Dimensionados para suportarem 05 vezes o peso da tubulacao cheia de agua, acrescido de 100 kg por suporte.",
+      "subItems": [],
+      "testDescription": "",
+      "value": 0
+    }
+  ],
+
+  "resources": {
+    "orgChart": {
+      "company": ["Diretoria Geral", "Gerencia Administrativa", "Gerencia de Engenharia", "Gerencia Financeira", "Gerencia Comercial", "Coordenacao de Projetos", "Coordenacao de Obras", "Departamento de Compras", "QSMS"],
+      "project": ["Gerente de Projeto", "Engenheiro Residente", "Encarregado Geral", "Tecnico de Seguranca", "Administrativo de Obra", "Encarregado de Instalacoes", "Equipe de Montagem", "Equipe de Testes"]
+    },
+    "workforce": [
+      {"role": "Engenheiro", "qty": 1, "category": "Gerencia do Canteiro"},
+      {"role": "Administrativo", "qty": 1, "category": "Gerencia do Canteiro"},
+      {"role": "Encarregado de Instalacoes", "qty": 1, "category": "Gerencia do Canteiro"},
+      {"role": "Tecnico de Seguranca do Trabalho", "qty": 1, "category": "Gerencia do Canteiro"},
+      {"role": "Encanador", "qty": 4, "category": "Oficiais e Ajudantes"},
+      {"role": "Ajudante de Encanador", "qty": 6, "category": "Oficiais e Ajudantes"},
+      {"role": "Soldador", "qty": 1, "category": "Oficiais e Ajudantes"},
+      {"role": "Eletricista", "qty": 2, "category": "Oficiais e Ajudantes"},
+      {"role": "Ajudante de Eletricista", "qty": 2, "category": "Oficiais e Ajudantes"},
+      {"role": "Pintor", "qty": 1, "category": "Oficiais e Ajudantes"}
+    ],
+    "equipment": [
+      {"item": "Plataforma Pantografica Eletrica", "qty": 6, "unit": "mes"},
+      {"item": "Andaime", "qty": 2, "unit": "mes"},
+      {"item": "Escada de Extensao", "qty": 4, "unit": "mes"},
+      {"item": "Furadeira de Impacto (4 un.)", "qty": 12, "unit": "mes"},
+      {"item": "Container escritorio com sanitario", "qty": 2, "unit": "mes"},
+      {"item": "Pipe Shop 10x10m", "qty": 1, "unit": "mes"},
+      {"item": "Container almoxarifado", "qty": 2, "unit": "mes"},
+      {"item": "Conjunto de Pintura", "qty": 1, "unit": "mes"},
+      {"item": "Bancada", "qty": 2, "unit": "mes"},
+      {"item": "Arquivo de aco", "qty": 2, "unit": "mes"}
+    ]
+  },
+
+  "qualityPlan": {
+    "objective": "Definir as medidas de qualidade para atender as necessidades do cliente, e garantir a conformidade das entregas de acordo com a politica de qualidade e os criterios de aceitacao definidos.",
+    "method": "Gerenciar a qualidade do projeto requer um plano de qualidade aprovado englobando os principais processos. O plano e desenvolvido e aprovado durante a fase de planejamento para confirmar os criterios de aceitacao das entregas.",
+    "processes": [
+      "Garantia de Qualidade: auditoria dos requisitos e melhoria continua dos processos",
+      "Controle de Qualidade: monitoramento e registro dos resultados da execucao das atividades"
+    ]
+  },
+
+  "databook": "Realizaremos a compilacao e classificacao, organizacao e paginacao de toda a documentacao tecnica emitida durante a obra. Manteremos acessiveis e permanentes os registros gerados durante a fabricacao e montagem dos sistemas. Ao termino disponibilizaremos copia fisica e digital do Databook completo.",
+
+  "safetyRequirements": [
+    "Trabalho em altura: treinamento especifico, cintos com CA, talabarte duplo com absorvedor, linhas de vida, capacete com jugular",
+    "Trabalhos em instalacoes eletricas: proibido intervencoes energizadas, somente eletricista NR-10, ATR obrigatoria",
+    "Trabalhos a quente: funcionarios treinados, ATR obrigatoria, valvula corta chama, protecao para discos, lona antichama",
+    "Residuos: coleta e descarte conforme procedimento de coleta seletiva",
+    "Geral: proibido adornos, uso obrigatorio de EPIs, corrimao, faixa de pedestre, limite de velocidade, cinto de seguranca",
+    "Regras de tolerancia zero: altura, eletricidade, bloqueio de energias perigosas, espaco confinado, equipamentos moveis"
+  ],
+
+  "constructionSite": {
+    "description": "Canteiro de obras em local pre-determinado pela Contratante, com instalacoes provisorias conforme NR-10, 18, 23, 24 e 26. Sem alojamento de pessoal na area da obra.",
+    "requirements": [
+      "Mobilizacao e desmobilizacao",
+      "Nivelamento e regularizacao da area",
+      "Drenagens provisorias",
+      "Recebimento e controle de materiais",
+      "Limpeza e organizacao constante",
+      "Protecao ambiental contra residuos contaminantes"
+    ],
+    "utilities": "Energia: 25 kVA | Agua: 0,25 m3/h"
+  },
+
+  "responsibilities": {
+    "jonel": [
+      "Execucao, coordenacao e supervisao tecnica dos servicos",
+      "Protecoes de seguranca do trabalho",
+      "Transporte horizontal e vertical de pessoal e materiais",
+      "Custos com leis trabalhistas e rescisoes",
+      "Custos com fretes, transportes, seguros",
+      "Custos com transporte, alimentacao e leis sociais"
+    ],
+    "additionalRequirements": [
+      "Documentacao legal em dia conforme relacao da Contratante",
+      "Integracao previa",
+      "Habilitacao para trabalhos em altura, espaco confinado e eletricidade",
+      "EPIs conforme NR-6",
+      "Profissionais habilitados para cada tarefa"
+    ]
+  },
+
+  "timeline": {
+    "executionPeriod": "06 meses",
+    "importedMaterials": "60 dias para materiais e equipamentos importados",
+    "notes": "Prazo considerando liberacao das areas. Interrupcoes ou paralisacoes dilatam o prazo proporcionalmente."
+  },
+
+  "commercialConditions": {
+    "basicConditions": [
+      "Acrescimos de areas ou modificacoes requerem orcamento complementar",
+      "Desenhos de arquitetura em DWG fornecidos pela Contratante",
+      "Prazo dilatado em caso de greves, acidentes, falta de energia ou forca maior",
+      "Furacao de pecas estruturais fora da responsabilidade da Jonel"
+    ],
+    "warranty": "12 meses apos o termino da montagem, desde que usada para os fins destinados e mantida por pessoal habilitado",
+    "insurance": "Seguro de Risco de Engenharia com clausula de Responsabilidade Civil Cruzada e Seguro contra roubo e furto sao de responsabilidade do Contratante"
+  },
+
+  "pricing": {
+    "currency": "BRL",
+    "items": [
+      {"item": "01", "description": "Materiais", "value": 0},
+      {"item": "02", "description": "Servicos de Engenharia e Consultoria Tecnica (NBM 1.1403.10.00)", "value": 0}
+    ],
+    "total": 0,
+    "taxNote": "Ja estao incluidos todos os impostos, encargos legais, contribuicao ou taxas incidentes sobre servicos, lucro e todos os custos e despesas.",
+    "paymentTerms": {
+      "labor": "20% na assinatura do contrato | 80% contra medicoes mensais para pagamento apos 30 dias",
+      "materials": "100% faturado direto dos fornecedores ao cliente final, pagamentos 30/60 dias"
+    },
+    "penalty": "Multa por atraso: 1,0% por dia, limitada a 10%, aplicavel somente em caso de falha comprovada da contratada"
+  },
+
+  "exclusions": [
+    "Sistema de iluminacao de emergencia (quando nao selecionado)",
+    "Reservatorios de agua para o sistema de chuveiros automaticos e hidrantes",
+    "Servicos civis",
+    "Alimentacao eletrica do painel de comando das bombas da entrada de energia ate a casa de bombas"
+  ],
+
+  "documentHierarchy": [
+    "1. Especificacao do Edital / Folha de Dados e documentos tecnicos apresentados pelo cliente",
+    "2. Ordem de Compra",
+    "3. Proposta do Fornecedor"
+  ],
+
+  "cta": {
+    "headline": "Prontos para avancar com seguranca e eficiencia",
+    "subtext": "Permanecemos a disposicao para esclarecer duvidas, ajustar o escopo conforme necessario e avancar para a proxima etapa de aprovacao.",
+    "buttons": ["Aprovar Proposta", "Solicitar Ajustes", "Agendar Reuniao"]
+  },
+
+  "contact": {
+    "company": "Jonel Engenharia de Instalacoes",
+    "legalName": "Jonel Equipamentos Contra Incendios Ltda",
+    "person": "Eng. Cleiton Tolentino de Almeida",
+    "phone": "+55 19 99999-9999",
+    "email": "contato@jonelincendio.com.br",
+    "website": "www.jonelincendio.com.br"
+  }
+}

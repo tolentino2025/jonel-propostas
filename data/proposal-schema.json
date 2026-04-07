@@ -1,0 +1,86 @@
+{
+  "$schema": "Proposal Schema — Jonel Engenharia",
+  "$description": "Schema de referencia para propostas tecnico-comerciais. Todos os campos e seus tipos.",
+  "brand": {
+    "companyName": "string — Nome da empresa (obrigatorio)",
+    "tagline": "string — Subtitulo institucional",
+    "logoSvgInline": "string — SVG inline do logo (base64 ou SVG direto)",
+    "style": "string — Descricao do estilo visual"
+  },
+  "proposalMeta": {
+    "proposalTitle": "string — Titulo da proposta (obrigatorio)",
+    "proposalSubtitle": "string — Subtitulo da proposta",
+    "proposalCode": "string — Codigo da proposta (ex: PROP-2026-001)",
+    "date": "string — Data no formato YYYY-MM-DD (obrigatorio)",
+    "validityDays": "number — Dias de validade",
+    "version": "string — Versao da proposta"
+  },
+  "client": {
+    "clientName": "string — Nome/razao social do cliente (obrigatorio)",
+    "contactName": "string — Nome do responsavel no cliente",
+    "segment": "string — Segmento (Industrial, Comercial, Logistico, etc)",
+    "projectName": "string — Nome do projeto/obra (obrigatorio)",
+    "projectLocation": "string — Localizacao do projeto"
+  },
+  "context": {
+    "objective": "string — Objetivo da proposta",
+    "summary": "string — Resumo executivo",
+    "premises": ["string — Lista de premissas adotadas"]
+  },
+  "aboutCompany": {
+    "headline": "string — Frase principal sobre a empresa",
+    "description": "string — Texto descritivo da empresa",
+    "highlights": ["string — Lista de destaques/capacidades"]
+  },
+  "scopeItems": [
+    {
+      "id": "string — Identificador unico (ex: sprinklers)",
+      "title": "string — Nome do sistema/servico",
+      "included": "boolean — Se esta incluso no valor",
+      "category": "string — Categoria (Supressao, Combate, Deteccao, etc)",
+      "description": "string — Descricao comercial do item",
+      "deliverables": ["string — Lista de entregaveis"],
+      "notes": "string — Observacoes tecnicas",
+      "value": "number — Valor em reais (opcional)"
+    }
+  ],
+  "optionalItems": [
+    {
+      "title": "string — Nome do item opcional",
+      "description": "string — Descricao",
+      "value": "number — Valor em reais"
+    }
+  ],
+  "excludedItems": ["string — Lista de itens nao inclusos"],
+  "differentials": ["string — Lista de diferenciais"],
+  "methodology": ["string — Lista de etapas da metodologia"],
+  "timeline": {
+    "estimatedDuration": "string — Duracao total estimada",
+    "phases": [
+      {
+        "name": "string — Nome da fase",
+        "duration": "string — Duracao da fase"
+      }
+    ]
+  },
+  "pricing": {
+    "currency": "string — Moeda (BRL)",
+    "subtotal": "number — Subtotal dos itens inclusos",
+    "optionalSubtotal": "number — Subtotal dos opcionais",
+    "total": "number — Total geral",
+    "paymentTerms": "string — Condicoes de pagamento",
+    "commercialNotes": ["string — Notas comerciais"]
+  },
+  "cta": {
+    "headline": "string — Frase de encerramento",
+    "subtext": "string — Texto complementar",
+    "buttons": ["string — Labels dos botoes de acao"]
+  },
+  "contact": {
+    "company": "string — Nome da empresa",
+    "person": "string — Nome do responsavel",
+    "phone": "string — Telefone/WhatsApp",
+    "email": "string — Email",
+    "website": "string — Site"
+  }
+}
