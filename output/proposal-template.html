@@ -1291,6 +1291,12 @@ renderAll();
 .cfg-sys-info{flex:1}
 .cfg-sys-name{font-size:.82rem;font-weight:700;color:#111}
 .cfg-sys-cat{font-size:.65rem;color:#888;text-transform:uppercase;letter-spacing:.1em}
+.cfg-eqp-list{display:none;padding:8px 0 4px 0;border-top:1px solid rgba(0,0,0,0.06);margin-top:8px;width:100%;overflow:hidden}
+.cfg-sys.active .cfg-eqp-list{display:block}
+.cfg-eqp-row{display:flex;align-items:center;gap:6px;padding:3px 0}
+.cfg-eqp-desc{flex:1;min-width:0;font-size:.65rem;color:#555;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cfg-eqp-qty{width:80px;text-align:center;font-size:.7rem;font-weight:600;padding:3px 4px;border:1px solid #ddd;border-radius:4px;background:#fff;flex-shrink:0}
+.cfg-eqp-qty:focus{border-color:#C8102E;outline:none}
 .cfg-badge{display:inline-block;background:#C8102E;color:#fff;font-size:.65rem;font-weight:800;padding:2px 8px;border-radius:10px;margin-left:8px}
 .cfg-total{font-size:1.2rem;font-weight:900;color:#0A0A0A;padding:12px 0;border-top:2px solid #0A0A0A;margin-top:8px;text-align:right}
 .cfg-excl-item{display:flex;gap:8px;align-items:center;margin-bottom:6px}
@@ -1444,8 +1450,21 @@ div.className='cfg-sys'+(s.enabled?' active':'');
 div.innerHTML=`<input type="checkbox" id="cfg-sys-${i}" ${s.enabled?'checked':''}>
 <div class="cfg-sys-check">${s.enabled?'✓':''}</div>
 <div class="cfg-sys-info"><div class="cfg-sys-name">${s.title}</div><div class="cfg-sys-cat">${s.cat}</div></div>`;
-div.addEventListener('click',()=>{
-const cb=div.querySelector('input');
+// Equipment quantity inputs
+const eqpDiv=document.createElement('div');
+eqpDiv.className='cfg-eqp-list';
+eqpDiv.id='cfg-eqp-'+i;
+s.eqp.forEach((e,j)=>{
+const row=document.createElement('div');
+row.className='cfg-eqp-row';
+row.innerHTML=`<span class="cfg-eqp-desc">${e[0]}</span><input class="cfg-eqp-qty" data-sys="${i}" data-eqp="${j}" value="${e[1]}">`;
+eqpDiv.appendChild(row);
+});
+div.appendChild(eqpDiv);
+eqpDiv.addEventListener('click',ev=>ev.stopPropagation());
+div.addEventListener('click',(ev)=>{
+if(ev.target.classList.contains('cfg-eqp-qty'))return;
+const cb=div.querySelector('input[type=checkbox]');
 cb.checked=!cb.checked;
 div.classList.toggle('active',cb.checked);
 div.querySelector('.cfg-sys-check').textContent=cb.checked?'✓':'';
@@ -1519,10 +1538,14 @@ D.pricing.labor=document.getElementById('cfg-labor').value;
 D.pricing.materials=document.getElementById('cfg-materials').value;
 D.pricing.warranty=document.getElementById('cfg-warranty').value;
 
-// Systems
+// Systems + Equipment quantities
 D.systems.forEach((s,i)=>{
 const cb=document.getElementById('cfg-sys-'+i);
 if(cb)s.enabled=cb.checked;
+s.eqp.forEach((e,j)=>{
+const inp=document.querySelector(`[data-sys="${i}"][data-eqp="${j}"]`);
+if(inp)e[1]=inp.value;
+});
 });
 
 // Exclusions
