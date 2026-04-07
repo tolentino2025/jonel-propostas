@@ -1297,6 +1297,7 @@ renderAll();
 .cfg-eqp-desc{flex:1;min-width:0;font-size:.65rem;color:#555;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .cfg-eqp-qty{width:80px;text-align:center;font-size:.7rem;font-weight:600;padding:3px 4px;border:1px solid #ddd;border-radius:4px;background:#fff;flex-shrink:0}
 .cfg-eqp-qty:focus{border-color:#C8102E;outline:none}
+.cfg-wf-cat{font-size:.6rem;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.1em;padding:8px 0 2px 0;border-bottom:1px solid #eee}
 .cfg-badge{display:inline-block;background:#C8102E;color:#fff;font-size:.65rem;font-weight:800;padding:2px 8px;border-radius:10px;margin-left:8px}
 .cfg-total{font-size:1.2rem;font-weight:900;color:#0A0A0A;padding:12px 0;border-top:2px solid #0A0A0A;margin-top:8px;text-align:right}
 .cfg-excl-item{display:flex;gap:8px;align-items:center;margin-bottom:6px}
@@ -1356,6 +1357,16 @@ renderAll();
 <div class="cfg-sec">
 <div class="cfg-sec-title">Sistemas do Escopo <span id="cfg-sys-badge" class="cfg-badge">0/0</span></div>
 <div id="cfg-systems"></div>
+</div>
+
+<div class="cfg-sec">
+<div class="cfg-sec-title">Histograma de Mao de Obra</div>
+<div id="cfg-workforce"></div>
+</div>
+
+<div class="cfg-sec">
+<div class="cfg-sec-title">Equipamentos Disponiveis</div>
+<div id="cfg-equipment"></div>
 </div>
 
 <div class="cfg-sec">
@@ -1474,6 +1485,34 @@ container.appendChild(div);
 });
 updateSysBadge();
 
+// Workforce
+const wfContainer=document.getElementById('cfg-workforce');
+wfContainer.innerHTML='';
+let prevCat='';
+D.workforce.forEach((w,i)=>{
+if(w.c!==prevCat){
+const catDiv=document.createElement('div');
+catDiv.className='cfg-wf-cat';
+catDiv.textContent=w.c;
+wfContainer.appendChild(catDiv);
+prevCat=w.c;
+}
+const row=document.createElement('div');
+row.className='cfg-eqp-row';
+row.innerHTML=`<span class="cfg-eqp-desc">${w.r}</span><input class="cfg-eqp-qty" data-wf="${i}" value="${w.q}">`;
+wfContainer.appendChild(row);
+});
+
+// Equipment
+const eqContainer=document.getElementById('cfg-equipment');
+eqContainer.innerHTML='';
+D.equipment.forEach((e,i)=>{
+const row=document.createElement('div');
+row.className='cfg-eqp-row';
+row.innerHTML=`<span class="cfg-eqp-desc">${e.i}</span><input class="cfg-eqp-qty" data-equip="${i}" value="${e.q}" style="width:50px"><input class="cfg-eqp-qty" data-equip-u="${i}" value="${e.u}" style="width:50px">`;
+eqContainer.appendChild(row);
+});
+
 // Exclusions
 renderExclusions();
 }
@@ -1546,6 +1585,20 @@ s.eqp.forEach((e,j)=>{
 const inp=document.querySelector(`[data-sys="${i}"][data-eqp="${j}"]`);
 if(inp)e[1]=inp.value;
 });
+});
+
+// Workforce quantities
+D.workforce.forEach((w,i)=>{
+const inp=document.querySelector(`[data-wf="${i}"]`);
+if(inp)w.q=parseInt(inp.value)||0;
+});
+
+// Equipment quantities
+D.equipment.forEach((e,i)=>{
+const inp=document.querySelector(`[data-equip="${i}"]`);
+if(inp)e.q=parseInt(inp.value)||0;
+const inpU=document.querySelector(`[data-equip-u="${i}"]`);
+if(inpU)e.u=inpU.value;
 });
 
 // Exclusions
