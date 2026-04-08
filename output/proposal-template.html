@@ -1298,6 +1298,12 @@ renderAll();
 .cfg-eqp-qty{width:80px;text-align:center;font-size:.7rem;font-weight:600;padding:3px 4px;border:1px solid #ddd;border-radius:4px;background:#fff;flex-shrink:0}
 .cfg-eqp-qty:focus{border-color:#C8102E;outline:none}
 .cfg-wf-cat{font-size:.6rem;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.1em;padding:8px 0 2px 0;border-bottom:1px solid #eee}
+.cfg-eqp-name{flex:1;min-width:0;font-size:.65rem;color:#333;padding:3px 4px;border:1px solid #eee;border-radius:4px;background:#fafafa}
+.cfg-eqp-name:focus{border-color:#C8102E;outline:none;background:#fff}
+.cfg-row-rm{background:none;border:none;color:#C8102E;cursor:pointer;font-size:.85rem;padding:1px 4px;border-radius:4px;flex-shrink:0;opacity:.5}
+.cfg-row-rm:hover{opacity:1;background:#fef2f2}
+.cfg-row-add{background:none;border:1.5px dashed #ccc;color:#888;cursor:pointer;padding:6px;border-radius:4px;width:100%;font-size:.68rem;font-family:'Inter',sans-serif;margin-top:4px;transition:all .2s}
+.cfg-row-add:hover{border-color:#0A0A0A;color:#0A0A0A}
 .cfg-badge{display:inline-block;background:#C8102E;color:#fff;font-size:.65rem;font-weight:800;padding:2px 8px;border-radius:10px;margin-left:8px}
 .cfg-total{font-size:1.2rem;font-weight:900;color:#0A0A0A;padding:12px 0;border-top:2px solid #0A0A0A;margin-top:8px;text-align:right}
 .cfg-excl-item{display:flex;gap:8px;align-items:center;margin-bottom:6px}
@@ -1468,13 +1474,19 @@ eqpDiv.id='cfg-eqp-'+i;
 s.eqp.forEach((e,j)=>{
 const row=document.createElement('div');
 row.className='cfg-eqp-row';
-row.innerHTML=`<span class="cfg-eqp-desc">${e[0]}</span><input class="cfg-eqp-qty" data-sys="${i}" data-eqp="${j}" value="${e[1]}">`;
+row.innerHTML=`<input class="cfg-eqp-name" data-sys-name="${i}-${j}" value="${e[0]}"><input class="cfg-eqp-qty" data-sys="${i}" data-eqp="${j}" value="${e[1]}"><button class="cfg-row-rm">✕</button>`;
+row.querySelector('.cfg-row-rm').addEventListener('click',()=>{s.eqp.splice(j,1);populateForm();});
 eqpDiv.appendChild(row);
 });
+const addBtn=document.createElement('button');
+addBtn.className='cfg-row-add';
+addBtn.textContent='+ Adicionar item';
+addBtn.addEventListener('click',(ev)=>{ev.stopPropagation();s.eqp.push(['Novo item','01 conj']);populateForm();});
+eqpDiv.appendChild(addBtn);
 div.appendChild(eqpDiv);
 eqpDiv.addEventListener('click',ev=>ev.stopPropagation());
 div.addEventListener('click',(ev)=>{
-if(ev.target.classList.contains('cfg-eqp-qty'))return;
+if(ev.target.classList.contains('cfg-eqp-qty')||ev.target.classList.contains('cfg-eqp-name'))return;
 const cb=div.querySelector('input[type=checkbox]');
 cb.checked=!cb.checked;
 div.classList.toggle('active',cb.checked);
@@ -1499,9 +1511,15 @@ prevCat=w.c;
 }
 const row=document.createElement('div');
 row.className='cfg-eqp-row';
-row.innerHTML=`<span class="cfg-eqp-desc">${w.r}</span><input class="cfg-eqp-qty" data-wf="${i}" value="${w.q}">`;
+row.innerHTML=`<input class="cfg-eqp-name" data-wf-name="${i}" value="${w.r}"><input class="cfg-eqp-qty" data-wf="${i}" value="${w.q}" style="width:50px"><button class="cfg-row-rm">✕</button>`;
+row.querySelector('.cfg-row-rm').addEventListener('click',()=>{D.workforce.splice(i,1);populateForm();});
 wfContainer.appendChild(row);
 });
+const wfAdd=document.createElement('button');
+wfAdd.className='cfg-row-add';
+wfAdd.textContent='+ Adicionar funcao';
+wfAdd.addEventListener('click',()=>{const lastCat=D.workforce.length?D.workforce[D.workforce.length-1].c:'Oficiais';D.workforce.push({r:'Nova funcao',q:1,c:lastCat});populateForm();});
+wfContainer.appendChild(wfAdd);
 
 // Equipment
 const eqContainer=document.getElementById('cfg-equipment');
@@ -1509,9 +1527,15 @@ eqContainer.innerHTML='';
 D.equipment.forEach((e,i)=>{
 const row=document.createElement('div');
 row.className='cfg-eqp-row';
-row.innerHTML=`<span class="cfg-eqp-desc">${e.i}</span><input class="cfg-eqp-qty" data-equip="${i}" value="${e.q}" style="width:50px"><input class="cfg-eqp-qty" data-equip-u="${i}" value="${e.u}" style="width:50px">`;
+row.innerHTML=`<input class="cfg-eqp-name" data-eq-name="${i}" value="${e.i}"><input class="cfg-eqp-qty" data-equip="${i}" value="${e.q}" style="width:50px"><input class="cfg-eqp-qty" data-equip-u="${i}" value="${e.u}" style="width:50px"><button class="cfg-row-rm">✕</button>`;
+row.querySelector('.cfg-row-rm').addEventListener('click',()=>{D.equipment.splice(i,1);populateForm();});
 eqContainer.appendChild(row);
 });
+const eqAdd=document.createElement('button');
+eqAdd.className='cfg-row-add';
+eqAdd.textContent='+ Adicionar equipamento';
+eqAdd.addEventListener('click',()=>{D.equipment.push({i:'Novo equipamento',q:1,u:'mes'});populateForm();});
+eqContainer.appendChild(eqAdd);
 
 // Exclusions
 renderExclusions();
@@ -1577,24 +1601,30 @@ D.pricing.labor=document.getElementById('cfg-labor').value;
 D.pricing.materials=document.getElementById('cfg-materials').value;
 D.pricing.warranty=document.getElementById('cfg-warranty').value;
 
-// Systems + Equipment quantities
+// Systems + Equipment names and quantities
 D.systems.forEach((s,i)=>{
 const cb=document.getElementById('cfg-sys-'+i);
 if(cb)s.enabled=cb.checked;
 s.eqp.forEach((e,j)=>{
+const inpName=document.querySelector(`[data-sys-name="${i}-${j}"]`);
+if(inpName)e[0]=inpName.value;
 const inp=document.querySelector(`[data-sys="${i}"][data-eqp="${j}"]`);
 if(inp)e[1]=inp.value;
 });
 });
 
-// Workforce quantities
+// Workforce names and quantities
 D.workforce.forEach((w,i)=>{
+const inpName=document.querySelector(`[data-wf-name="${i}"]`);
+if(inpName)w.r=inpName.value;
 const inp=document.querySelector(`[data-wf="${i}"]`);
 if(inp)w.q=parseInt(inp.value)||0;
 });
 
-// Equipment quantities
+// Equipment names, quantities and units
 D.equipment.forEach((e,i)=>{
+const inpName=document.querySelector(`[data-eq-name="${i}"]`);
+if(inpName)e.i=inpName.value;
 const inp=document.querySelector(`[data-equip="${i}"]`);
 if(inp)e.q=parseInt(inp.value)||0;
 const inpU=document.querySelector(`[data-equip-u="${i}"]`);
